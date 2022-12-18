@@ -1,17 +1,19 @@
 <template>
-  <HeaderComponent />
+  <HeaderComponent @loaded="changeLoaded" />
   <NavComponent />
-  <router-view v-slot="{ Component }">
-    <transition
-      name="fade"
-      mode="out-in"
-      @beforeLeave="beforeLeave"
-      @enter="enter"
-      @afterEnter="afterEnter"
-    >
-      <Component :is="Component" />
-    </transition>
-  </router-view>
+  <div class="loading-wrapper" :class="{ loaded: loaded }">
+    <router-view v-slot="{ Component }">
+      <transition
+        name="fade"
+        mode="out-in"
+        @beforeLeave="beforeLeave"
+        @enter="enter"
+        @afterEnter="afterEnter"
+      >
+        <Component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
   <FooterComponent />
 </template>
 
@@ -24,11 +26,12 @@ export default {
   components: {
     HeaderComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
   },
   data() {
     return {
       prevHeight: 0,
+      loaded: false
     };
   },
   methods: {
@@ -47,6 +50,9 @@ export default {
     afterEnter(element) {
       element.style.height = "auto";
     },
+    changeLoaded(status) {
+      this.loaded = status
+    }
   },
 };
 </script>
@@ -66,13 +72,37 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fade-enter-active {
-  transition: background-color .5s ease-in-out .25s, height .5s ease-in-out;
+.loading-wrapper {
+  position: relative;
+
+  &.loaded {
+    &::after {
+      background-color: transparent;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background-color: $black;
+    content: '';
+    top: 0;
+    left: 0;
+    transition: 1.25s background-color ease-in-out 3s;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
 }
 
 .fade-enter-from,
-.fade-leave-to {
+.fade-leave-active {
   background-color: $black;
 }
 </style>

@@ -1,8 +1,5 @@
 <template>
-  <header
-    class="header"
-    :class="{ loading: this.loading }"
-  >
+  <header class="header" :class="{ loading: this.loading }">
     <div class="header__logo" :class="{ loaded: this.loaded }">
       <router-link to="/" class="header__logo-name"
         >&lt;Lobanov Nikita/&gt;</router-link
@@ -25,6 +22,18 @@ export default {
       this.loading = false;
     }, 0);
   },
+  methods: {
+    emitLoaded() {
+      this.$emit("loaded", this.loaded);
+    },
+  },
+  watch: {
+    loaded(value) {
+      if (value === true) {
+        this.emitLoaded()
+      }
+    }
+  }
 };
 </script>
 
@@ -54,7 +63,7 @@ export default {
     position: relative;
     width: 100%;
     text-align: center;
-    transition: 1.5s transform ease-in-out 1.5s, .5s opacity ease-in-out .5s;
+    transition: 1.5s transform ease-in-out 1.5s, 0.5s opacity ease-in-out 0.5s;
     opacity: 0;
 
     &.loaded {
