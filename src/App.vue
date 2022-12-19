@@ -1,6 +1,8 @@
 <template>
   <HeaderComponent @loaded="changeLoaded" />
-  <NavComponent />
+  <nav class="nav">
+    <NavComponent />
+  </nav>
   <div class="loading-wrapper" :class="{ loaded: loaded }">
     <router-view v-slot="{ Component }">
       <transition
@@ -31,7 +33,7 @@ export default {
   data() {
     return {
       prevHeight: 0,
-      loaded: false
+      loaded: false,
     };
   },
   methods: {
@@ -51,72 +53,8 @@ export default {
       element.style.height = "auto";
     },
     changeLoaded(status) {
-      this.loaded = status
-    }
+      this.loaded = status;
+    },
   },
 };
 </script>
-
-<style lang="scss">
-@import "@/assets/styles/_";
-
-body {
-  background-color: $black;
-  overflow-x: hidden;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: $white;
-}
-
-.loading-wrapper {
-  position: relative;
-
-  &.loaded {
-    &::after {
-      background-color: transparent;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    background-color: $black;
-    content: '';
-    top: 0;
-    left: 0;
-    transition: 1.25s background-color ease-in-out 3s;
-  }
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
-
-  * {
-    transition: all 0.5s ease-in-out;
-  }
-}
-
-.fade-enter-from,
-.fade-leave-active {
-  background-color: $black;
-
-  * {
-    opacity: 0;
-  }
-}
-</style>

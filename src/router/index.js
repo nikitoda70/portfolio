@@ -11,6 +11,10 @@ const routes = [
     path: '/projects',
     name: 'projects',
     component: () => import('../views/ProjectsView.vue')
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/"
   }
 ]
 
