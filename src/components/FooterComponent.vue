@@ -1,6 +1,8 @@
 <template>
   <footer class="footer">
-    <router-link to="/" class="footer__logo">&lt;Lobanov Nikita/&gt;</router-link>
+    <div class="container">
+      <router-link to="/" class="footer__logo">&lt;Lobanov Nikita/&gt;</router-link>
+    </div>
   </footer>
 </template>
 
@@ -8,7 +10,7 @@
 @import "@/assets/styles/_";
 
 .footer {
-  padding: 20px 60px;
+  padding: 20px 0;
   background-color: $black;
   color: $white;
 

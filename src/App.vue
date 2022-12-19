@@ -60,6 +60,11 @@ export default {
 <style lang="scss">
 @import "@/assets/styles/_";
 
+body {
+  background-color: $black;
+  overflow-x: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -70,6 +75,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
 }
 
 .loading-wrapper {
@@ -99,10 +105,18 @@ export default {
 .fade-leave-active {
   transition: all 0.5s ease-in-out;
   overflow: hidden;
+
+  * {
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .fade-enter-from,
 .fade-leave-active {
   background-color: $black;
+
+  * {
+    opacity: 0;
+  }
 }
 </style>

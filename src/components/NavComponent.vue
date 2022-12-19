@@ -1,7 +1,9 @@
 <template>
   <nav class="nav">
     <router-link class="nav__item" to="/">Главная</router-link>
-    <router-link class="nav__item" to="/about">Обо мне</router-link>
+    <router-link class="nav__item" to="/projects">Мои проекты</router-link>
+    <a class="nav__item" target="_blank" href="https://github.com/nikitoda70">Github</a>
+    <a class="nav__item" target="_blank" href="https://t.me/stfuchump">Telegram</a>
   </nav>
 </template>
 
