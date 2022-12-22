@@ -8,5 +8,16 @@
       <h1>This is a projects page</h1>
     </div>
     </div>
+    <ContactsComponent />
   </main>
 </template>
+
+<script>
+import ContactsComponent from "@/components/ContactsComponent"
+
+export default {
+  components: {
+    ContactsComponent
+  }
+}
+</script>

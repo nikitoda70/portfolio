@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ loading: this.loading }">
+  <header class="header" :class="{ loading: !this.loaded }">
     <div class="header__logo" :class="{ loaded: this.loaded }">
       <router-link to="/" class="header__logo-name"
         >&lt;Lobanov Nikita/&gt;</router-link
@@ -13,13 +13,11 @@ export default {
   data() {
     return {
       loaded: false,
-      loading: true,
     };
   },
   mounted() {
     setTimeout(() => {
       this.loaded = true;
-      this.loading = false;
     }, 0);
   },
   methods: {

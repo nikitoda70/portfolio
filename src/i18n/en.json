@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "main": "Main",
+    "projects": "My projects"
+  },
+  "titles": {
+    "hero": "Nikita Lobanov <br> Frontend-developer <br> from Tomsk",
+    "skills": "My skills",
+    "contacts": "My contacts"
+  }
+}

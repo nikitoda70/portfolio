@@ -3,11 +3,7 @@
     <div class="hero">
       <div class="container">
         <div class="hero__wrapper">
-          <h1 class="hero__title">
-            Никита Лобанов <br />
-            Frontend-разработчик <br />
-            из Томска
-          </h1>
+          <h1 class="hero__title" v-html="$t('titles.hero')"></h1>
           <div class="hero__img">
             <img src="@/assets/img/hero.png" alt="Me" />
           </div>
@@ -16,7 +12,7 @@
     </div>
     <div class="skills">
       <div class="container">
-        <h2 class="block-title">Мои навыки</h2>
+        <h2 class="block-title">{{ $t('titles.skills') }}</h2>
         <div class="skills__wrapper">
           <div class="skills__item skills__item-1" v-scroll-animation>
             <img src="@/assets/img/skills/html.png" alt="HTML" />
@@ -73,9 +69,16 @@
         </div>
       </div>
     </div>
+    <ContactsComponent />
   </main>
 </template>
 
 <script>
-export default {};
+import ContactsComponent from '@/components/ContactsComponent'
+
+export default {
+  components: {
+    ContactsComponent
+  }
+};
 </script>

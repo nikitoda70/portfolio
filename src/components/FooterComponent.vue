@@ -6,8 +6,8 @@
           >&lt;Lobanov Nikita/&gt;</router-link
         >
         <div class="footer__nav">
-          <router-link class="nav-item" to="/">Главная</router-link>
-          <router-link class="nav-item" to="/projects">Мои проекты</router-link>
+          <router-link class="nav-item" to="/">{{$t('nav.main')}}</router-link>
+          <router-link class="nav-item" to="/projects">{{$t('nav.projects')}}</router-link>
           <a
             class="nav-item"
             target="_blank"
