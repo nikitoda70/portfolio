@@ -2,13 +2,13 @@
   <HeaderComponent @loaded="changeLoaded" />
   <nav class="nav">
     <div class="switch">
-      <button class="switch__btn active" @click="langRu">RU</button>
+      <button class="switch__btn" @click="langRu">RU</button>
       <button class="switch__btn" @click="langEn">EN</button>
     </div>
-    <NavComponent :t="$t" />
+    <NavComponent />
   </nav>
   <div class="loading-wrapper" :class="{ loaded: loaded }">
-    <router-view v-slot="{ Component }" :t="$t">
+    <router-view v-slot="{ Component }">
       <transition
         name="fade"
         mode="out-in"
@@ -20,7 +20,7 @@
       </transition>
     </router-view>
   </div>
-  <FooterComponent :t="$t" />
+  <FooterComponent />
 </template>
 
 <script setup>
