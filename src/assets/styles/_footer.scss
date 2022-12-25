@@ -3,15 +3,28 @@
   background-color: $black;
   color: $white;
 
+  @media (max-width: $xl) {
+    padding: 15px 0;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
     color: $white;
     text-decoration: none;
     font-size: 20px;
+
+    @media (max-width: $xxl) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $xl) {
+      font-size: 16px;
+    }
   }
 
   &__nav {
