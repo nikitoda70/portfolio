@@ -1,14 +1,8 @@
 import { createStore } from 'vuex'
+import skills from './skills'
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    skills
   }
 })

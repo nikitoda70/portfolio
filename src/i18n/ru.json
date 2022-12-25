@@ -6,7 +6,8 @@
   "titles": {
     "hero": "Никита Лобанов <br> Frontend-разработчик <br> из Томска",
     "skills": "Мои навыки",
-    "contacts": "Мои контакты"
+    "contacts": "Мои контакты",
+    "projects": "Мои проекты"
   },
   "contacts": {
     "mail": "Почта"

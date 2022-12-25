@@ -2,23 +2,22 @@
   <main>
     <div class="projects">
       <div class="container">
-      <h1>This is a </h1>
-      <h1>This is a projects page</h1>
-      <h1>This is a </h1>
-      <h1>This is a projects page</h1>
-      <h1>This is a projects page</h1>
-    </div>
+        <h2 class="block-title">
+          {{ $t('titles.projects') }}
+        </h2>
+        <h3>projects page</h3>
+      </div>
     </div>
     <ContactsComponent />
   </main>
 </template>
 
 <script>
-import ContactsComponent from "@/components/ContactsComponent"
+import ContactsComponent from "@/components/ContactsComponent";
 
 export default {
   components: {
-    ContactsComponent
-  }
-}
+    ContactsComponent,
+  },
+};
 </script>
