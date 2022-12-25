@@ -1,3 +1,14 @@
+@mixin xl-portrait {
+  @media (max-width: $xl) {
+    @media (orientation: portrait) {
+      top: auto;
+      left: auto;
+      bottom: auto;
+      right: auto;
+    }
+  }
+}
+
 .skills {
   padding: 100px 0;
 
@@ -5,9 +16,30 @@
     padding: 80px 0;
   }
 
+  @media (max-width: $lg) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: $md) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 30px 0;
+  }
+
   &__wrapper {
     position: relative;
     padding-top: 100vh;
+
+    @media (max-width: $xl) {
+      @media (orientation: portrait) {
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+    }
   }
 
   &__item {
@@ -18,22 +50,35 @@
     align-items: center;
     position: absolute;
 
-    @media (max-width: $xxl) {
-      max-width: 11%;
+    @media (max-width: $xl) {
+      @media (orientation: portrait) {
+        position: relative;
+        max-width: 34%;
+        margin-bottom: 30px;
+        margin-top: 5%;
+
+        &:nth-child(even) {
+          margin-top: 20%;
+        }
+      }
     }
 
-    > img {
+    >img {
       max-width: 100%;
       margin-bottom: 15px;
 
       @media (max-width: $xxl) {
         margin-bottom: 12px;
       }
+
+      @media (max-width: $lg) {
+        margin-bottom: 10px;
+      }
     }
 
     &.before-enter {
       transform: scale(0);
-      transition: all 1s cubic-bezier(.55,.05,.15,1.5) .15s;
+      transition: all 1s cubic-bezier(.55, .05, .15, 1.5) .15s;
     }
 
     &.enter {
@@ -43,66 +88,104 @@
     &-1 {
       top: 0;
       left: 0;
+
+      @include xl-portrait
     }
 
     &-2 {
       top: 15%;
       left: 70%;
+
+      @include xl-portrait
     }
 
     &-3 {
       top: 0;
       right: 0;
+
+      @include xl-portrait
     }
 
     &-4 {
       top: 40%;
       left: 50%;
+
+      @include xl-portrait
     }
 
     &-5 {
       top: 45%;
       left: 24%;
+
+      @include xl-portrait
     }
 
     &-6 {
       top: 0;
       left: 30%;
+
+      @include xl-portrait
     }
 
     &-7 {
       top: 60%;
       right: 0;
+
+      @include xl-portrait
     }
 
     &-8 {
       top: 80%;
       left: 55%;
+
+      @include xl-portrait
     }
 
     &-9 {
       top: 70%;
       left: 0;
+
+      @include xl-portrait
     }
 
     &-10 {
       top: 87%;
       left: 27%;
+
+      @include xl-portrait
     }
 
     &-11 {
       top: 23%;
       left: 7%;
+
+      @include xl-portrait
     }
 
     &-12 {
       top: 5%;
       left: 52%;
+
+      @include xl-portrait
     }
 
     &-13 {
       top: 48%;
       left: 72%;
+
+      @include xl-portrait
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+
+    @media (max-width: $xxl) {
+      font-size: 15px;
+    }
+
+    @media (max-width: $xl) {
+      font-size: 14px;
     }
   }
 }

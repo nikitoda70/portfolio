@@ -1,14 +1,5 @@
 .hero {
   display: flex;
-  max-height: calc(100vh - 160px);
-
-  @media (max-width: $xxl) {
-    max-height: calc(100vh - 134px);
-  }
-
-  @media (max-width: $xl) {
-    max-height: calc(100vh - 124px);
-  }
 
   &__wrapper {
     display: flex;
@@ -25,6 +16,27 @@
     @media (max-width: $xl) {
       padding-top: 12px;
       min-height: calc(100vh - 124px);
+
+      @media (orientation: portrait) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+      }
+    }
+
+    @media (max-width: $lg) {
+      min-height: calc(100vh - 110px);
+    }
+
+    @media (max-width: $md) {
+      @media (orientation: portrait) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+      }
+      min-height: calc(100vh - 92px);
+    }
+
+    @media (max-width: $sm) {
+      min-height: calc(100vh - 82px);
     }
   }
 
@@ -42,6 +54,30 @@
     @media (max-width: $xl) {
       font-size: 42px;
       padding-bottom: 30px;
+
+      @media (orientation: portrait) {
+        align-self: flex-start;
+      }
+    }
+
+    @media (max-width: $lg) {
+      padding-bottom: 25px;
+      font-size: 36px;
+    }
+
+    @media (max-width: $md) {
+      @media (orientation: portrait) {
+        align-self: flex-start;
+      }
+
+      font-size: 30px;
+      padding-bottom: 20px;
+      max-width: 100%;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 24px;
+      padding-bottom: 15px;
     }
   }
 
@@ -51,6 +87,26 @@
     display: flex;
     position: relative;
 
+    @media (max-width: $xl) {
+      @media (orientation: portrait) {
+        max-width: 60%;
+        margin-bottom: 20%;
+      }
+    }
+
+    @media (max-width: $md) {
+      @media (orientation: portrait) {
+        max-width: 50%;
+        margin-bottom: 18vh;
+      }
+    }
+
+    @media (max-width: $sm) {
+      @media (orientation: portrait) {
+        max-width: 75%;
+      }
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -58,10 +114,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
     }
 
-    > img {
+    >img {
       max-width: 100%;
     }
   }

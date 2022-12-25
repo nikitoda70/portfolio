@@ -18,11 +18,34 @@
     height: 78px;
   }
 
+  @media (max-width: $lg) {
+    padding: 20px 0;
+    height: 68px;
+  }
+
+  @media (max-width: $md) {
+    padding: 15px 0;
+    height: 58px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 10px 0;
+    height: 48px;
+  }
+
   &.loading {
     height: 100vh;
 
     .header__logo {
       transform: scale(4);
+
+      @media (max-width: $md) {
+        transform: scale(3);
+      }
+
+      @media (max-width: $sm) {
+        transform: scale(2.5);
+      }
     }
   }
 
@@ -56,6 +79,18 @@
 
       @media (max-width: $xl) {
         font-size: 16px;
+      }
+
+      @media (max-width: $lg) {
+        font-size: 15px;
+      }
+
+      @media (max-width: $md) {
+        font-size: 14px;
+      }
+
+      @media (max-width: $sm) {
+        font-size: 13px;
       }
     }
 
