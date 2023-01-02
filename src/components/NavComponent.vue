@@ -14,8 +14,31 @@
       >nikitoda70@gmail.com</a
     >
   </div>
-  <button class="nav__button">
+  <button class="nav__button" :class="{ 'show-menu': showMenu }" @click="changeMenu">
     <div class="nav__button-top"></div>
     <div class="nav__button-bottom"></div>
   </button>
+  <transition name="menu">
+    <NavMenu v-if="showMenu" @close="changeMenu" />
+  </transition>
 </template>
+
+<script>
+import NavMenu from '@/components/NavMenu'
+
+export default {
+  components: {
+    NavMenu
+  },
+  data() {
+    return {
+      showMenu: false
+    }
+  },
+  methods: {
+    changeMenu() {
+      this.showMenu = !this.showMenu
+    }
+  }
+}
+</script>
