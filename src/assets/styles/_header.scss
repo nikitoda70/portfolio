@@ -7,6 +7,8 @@
   align-items: center;
   justify-content: center;
   transition: 1.5s height ease-in-out 1.5s;
+  z-index: 4;
+  position: relative;
 
   @media (max-width: $xxl) {
     padding: 30px 0;
@@ -65,7 +67,7 @@
     }
 
     &-name {
-      z-index: 2;
+      z-index: 5;
       position: relative;
       background-color: $black;
       padding: 2px;

@@ -15,7 +15,7 @@ const routes = [
     name: 'projects',
     component: () => import('../views/ProjectsView.vue'),
     meta: {
-      title: 'Lobanov Nikita - projects'
+      title: 'Lobanov Nikita - Проекты'
     }
   },
   {
