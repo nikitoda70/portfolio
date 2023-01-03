@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-menu" @click="$emit('close', false)" @wheel.prevent @scroll.prevent>
+  <div class="nav-menu" @click="$emit('close', false)">
     <div class="nav-menu__content">
       <div class="container">
         <div class="nav-menu__wrapper">
