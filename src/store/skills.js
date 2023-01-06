@@ -16,9 +16,4 @@ export default {
       {id: 13, name: "Figma", img: require("@/assets/img/skills/figma.png")},
     ]
   },
-  getters: {
-    skills(state) {
-      return state.skills
-    }
-  },
 }

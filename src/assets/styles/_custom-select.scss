@@ -1,0 +1,28 @@
+.custom-select {
+  border-radius: 0;
+  outline: 2px solid $gray;
+  border: 0;
+  background-color: transparent;
+  padding: 12px 10px;
+  width: 100%;
+  transition: outline .2s ease-in-out;
+  font-size: 18px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+
+  @media (max-width: $lg) {
+    padding: 10px 8px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 2px solid $black;
+  }
+}

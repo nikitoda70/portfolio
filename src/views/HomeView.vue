@@ -33,12 +33,16 @@
 
 <script>
 import ContactsComponent from "@/components/ContactsComponent";
-import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 
 export default {
   components: {
     ContactsComponent,
   },
-  computed: mapGetters(["skills"]),
+  computed: {
+    ...mapState({
+      skills: state => state.skills.skills
+    }),
+  }
 };
 </script>

@@ -11,5 +11,44 @@
   },
   "contacts": {
     "mail": "Email"
+  },
+  "placeholders": {
+    "projects": "Search project",
+    "filter": "Filter projects"
+  },
+  "projectsSelect": {
+    "name": "Via title",
+    "newest": "Newest",
+    "oldest": "Oldest"
+  },
+  "projects": {
+    "1": {
+      "name": "Krasnoyarsk Economic Forum 2022",
+      "dateString": "Dec 2021 - Jan 2022"
+    },
+    "2": {
+      "name": "Smartland",
+      "dateString": "Jan 2022 - Feb 2022"
+    },
+    "3": {
+      "name": "Avialook",
+      "dateString": "Feb 2022 - Apr 2022"
+    },
+    "4": {
+      "name": "Watwell",
+      "dateString": "Mar 2022 - Apr 2022"
+    },
+    "5": {
+      "name": "JustDeco",
+      "dateString": "May 2022 - Aug 2022"
+    },
+    "6": {
+      "name": "Krasnoyarsk Employment Center",
+      "dateString": "Aug 2022 - Sep 2022"
+    },
+    "7": {
+      "name": "Orientir-M",
+      "dateString": "Sep 2022 - Oct 2022"
+    }
   }
 }
