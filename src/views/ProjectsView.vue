@@ -29,6 +29,7 @@
             class="projects__item"
             v-for="project in sortedAndSearchedProjects"
             :key="project.id"
+            @click="$router.push(`/projects/${project.id}`)"
           >
             <div class="projects__img-wrapper">
               <img

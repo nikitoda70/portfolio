@@ -19,6 +19,14 @@ const routes = [
     }
   },
   {
+    path: '/projects/:id',
+    name: 'project',
+    component: () => import('../views/ProjectPageView.vue'),
+    meta: {
+      title: 'Lobanov Nikita - Проекты'
+    }
+  },
+  {
     path: "/:catchAll(.*)",
     redirect: "/"
   }
