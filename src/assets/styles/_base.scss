@@ -49,7 +49,9 @@ body {
   transition: all 0.5s ease-in-out;
   overflow: hidden;
 
-  * {
+  *,
+  *::before,
+  *::after {
     transition: all 0.5s ease-in-out;
   }
 }
@@ -58,7 +60,9 @@ body {
 .fade-leave-active {
   background-color: $black;
 
-  * {
+  *,
+  *::before,
+  *::after {
     opacity: 0;
   }
 }

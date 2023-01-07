@@ -5,6 +5,7 @@ import store from './store'
 import ScrollAnimation from '@/directives/scroll-animation'
 import { languages, defaultLocale } from './i18n'
 import { createI18n, useI18n } from 'vue-i18n'
+import VueSplide from '@splidejs/vue-splide';
 import '@/assets/styles/_.scss';
 
 const localStorageLang = localStorage.getItem('lang')
@@ -25,4 +26,4 @@ const app = createApp(App, {
   }
 })
 
-app.use(store).use(i18n).use(router).directive('scroll-animation', ScrollAnimation).mount('#app')
+app.use(store).use(i18n).use(router).use(VueSplide).directive('scroll-animation', ScrollAnimation).mount('#app')
