@@ -24,31 +24,50 @@
   "projects": {
     "1": {
       "name": "Krasnoyarsk Economic Forum 2022",
-      "dateString": "Dec 2021 - Jan 2022"
+      "dateString": "Dec 2021 - Jan 2022",
+      "role": "On this project, I carried out the layout of the start and internal pages, working at pitcher.agency",
+      "about": "Website for the event 'Krasnoyarsk Economic Forum 2022' with the ability to watch news, gallery and live broadcasts"
     },
     "2": {
       "name": "Smartland",
-      "dateString": "Jan 2022 - Feb 2022"
+      "dateString": "Jan 2022 - Feb 2022",
+      "role": "On this project, I implemented the layout of the start page, inner pages and modal windows using the Bootstrap css framework, working at pitcher.agency",
+      "about": "A website for the Smartland service, which allows you to purchase investment products in the form of apartment houses with daily rent in the Altai Mountains. It is also possible to invite referrals and earn money from their investments"
     },
     "3": {
       "name": "Avialook",
-      "dateString": "Feb 2022 - Apr 2022"
+      "dateString": "Feb 2022 - Apr 2022",
+      "role": "On this project, I carried out the development of the start page, all internal pages and modal windows of the menu and specific news, working at pitcher.agency. I also used the SplideJS library to implement a slider for news, reviews and company partners",
+      "about": "A site for Avialook that allows you to buy and book air tickets at low prices, offering the user special offers from airlines - discounts, sales and promotions for flights around the world and to popular destinations. On the site you can see the latest news, unique offers for businesses and agents who want to start their own air ticket business, and the history of the company"
     },
     "4": {
       "name": "Watwell",
-      "dateString": "Mar 2022 - Apr 2022"
+      "dateString": "Mar 2022 - Apr 2022",
+      "role": "On this project, I carried out adaptive layout of blog pages, contacts and instructions, working at pitcher.agency",
+      "about": "Website for Watwell company, which produces innovative drinking systems for offices. The site provides an opportunity to read the company's news, learn more about the product, explore the range of the company's services and try out two types of dispenser control"
     },
     "5": {
       "name": "JustDeco",
-      "dateString": "May 2022 - Aug 2022"
+      "dateString": "May 2022 - Aug 2022",
+      "role": "On this project, I developed both versions of the start page, catalog modal windows, region selection, shopping cart, interface for creating projects and product groups for designers, as well as a chat with the manager. Also, I implemented the pages of the basket, projects and a single project, news and a single news, catalog and search with a different grid of products and about the company. The development was carried out for pitcher.agency",
+      "about": "A website for the JustDeco company, which sells furniture and interior design, helping people who make apartment renovation. The site is presented in two versions - for designers and for clients. Clients can order furniture, explore design projects and buy furniture directly from the pictures of these projects, read company news, track order status and manage their personal account. Designers have the opportunity to create their own design projects and earn a percentage of sales on them using the service"
     },
     "6": {
       "name": "Krasnoyarsk Employment Center",
-      "dateString": "Aug 2022 - Sep 2022"
+      "dateString": "Aug 2022 - Sep 2022",
+      "role": "On this project, I developed the start page, the page for announcements of events and news, as well as the job search page and a single vacancy. The development was carried out for pitcher.agency",
+      "about": "A site for the Krasnoyarsk Employment Center, which allows job seekers to find jobs and employers to find employees. On the site you can post your resume and see current vacancies. There are also contacts of the employment center and current news and announcements of events on the topiс"
     },
     "7": {
       "name": "Orientir-M",
-      "dateString": "Sep 2022 - Oct 2022"
-    }
+      "dateString": "Sep 2022 - Oct 2022",
+      "role": "On this project, I developed the start page, the news and specific news page, the photo gallery page, and the awards page. I also made a modal menu window and a modal feedback window. The development was carried out for pitcher.agency",
+      "about": "A website for Orientir-M, which has been producing and placing outdoor and indoor advertising in Krasnoyarsk for over 25 years. The site has the opportunity to see a map of advertising in the city, company news, a photo gallery and awards. Also, it is possible to buy advertising and choose the location of advertising on the map"
+    },
+    "error": "Ooops! There's no such project here :( Let's create!!!!",
+    "link": "Link to project:",
+    "date": "Date of development:",
+    "role": "My role on this project:",
+    "about": "About project:"
   }
 }

@@ -72,5 +72,8 @@ export default {
   methods: {
     ...mapMutations(['setSearchQuery', 'setSelectedSort'])
   },
+  unmounted() {
+    this.setSearchQuery('')
+  }
 };
 </script>
